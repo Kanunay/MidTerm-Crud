@@ -13,8 +13,10 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                    <div class="container"><h6>User credentials : {{ Auth::user()->role }}</h6></div>
+                        <div class="container"><h6>User created at: {{ Auth::user()->created_at }}</h6></div>
+                        <div class="container"><h6>User updated at: {{ Auth::user()->updated_at }}</h6></div>
 
-                    {{ __('You are logged in!') }}
                     
                 </div>
             </div>
