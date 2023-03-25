@@ -10,9 +10,9 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
-{{-- First name --}}
+{{-- First Name --}}
                         <div class="row mb-3">
-                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('First_name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
@@ -24,36 +24,7 @@
                                 @enderror
                             </div>
                         </div>
-{{-- Last name --}}
-                        <div class="row mb-3">
-                            <label for="last_name" class="col-md-4 col-form-label text-md-end">{{ __('Last_name') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="last_name" type="text" class="form-control @error('last_name') is-invalid @enderror" name="last_name" value="{{ old('last_name') }}" required autocomplete="last_name" autofocus>
-
-                                @error('last_name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-{{-- Role --}}
-                        <div class="row mb-3">
-                            <label for="role" class="col-md-4 col-form-label text-md-end">{{ __('Role(Admin or User)') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="role" type="text" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('name') }}" required autocomplete="role" autofocus>
-
-                                @error('role')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-{{-- End --}}
-
+{{-- Last Name --}}
                         <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
